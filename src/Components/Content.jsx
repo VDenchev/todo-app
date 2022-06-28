@@ -5,7 +5,7 @@ import TodoInput from "./TodoInput.jsx"
 
 const Content = () => {
 	return (
-		<div className="absolute top-14 left-1/2 -translate-x-1/2 w-[87%]">
+		<div className="absolute top-12 left-1/2 -translate-x-1/2 w-[87%]">
 			<Title />
 			<TodoInput />
 			<List></List>

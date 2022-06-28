@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      content: {
+        check: 'url("./Images/icon-check.svg")'
+      },
       colors: {
         blue: 'hsl(220, 98%, 61%)',
         gradient1: 'hsl(192, 100%, 67%)',

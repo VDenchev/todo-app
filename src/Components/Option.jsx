@@ -8,9 +8,13 @@ const Option = ({ text }) => {
 				name="buttons"
 				id={text}
 				value="4"
-				className="hidden"
+				className="hidden [&+*]:checked:text-blue"
 			/>
-			<label htmlFor={text}>{text}</label>
+			<label
+				htmlFor={text}
+				className="font-bold cursor-pointer hover:text-light-blue-500 transition duration-200">
+				{text}
+			</label>
 		</>
 	)
 }
