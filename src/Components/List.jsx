@@ -37,6 +37,9 @@ const List = ({ todoList, setTodoList }) => {
 		}
 	}, [option, todoList])
 
+	const clearCompletedTodos = () => {
+		setTodoList(activeTodos)
+	}
 	return (
 		<div className="bg-white rounded-md text-xs isolate shadow-sm">
 			{todoElements}
@@ -49,7 +52,9 @@ const List = ({ todoList, setTodoList }) => {
 					<Option text="Active" isChecked={option === "Active"} />
 					<Option text="Completed" isChecked={option === "Completed"} />
 				</div>
-				<button className="hover:text-light-blue-500 transition duration-200">
+				<button
+					className="hover:text-light-blue-500 transition duration-200"
+					onClick={clearCompletedTodos}>
 					Clear Completed
 				</button>
 			</div>
