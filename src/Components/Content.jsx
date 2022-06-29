@@ -10,7 +10,7 @@ const Content = () => {
 		<div className="absolute top-12 left-1/2 -translate-x-1/2 w-[87%]">
 			<Title />
 			<TodoInput handleEnterKeyPress={setTodoList} />
-			<List></List>
+			<List todoList={todoList} setTodoList={setTodoList}></List>
 		</div>
 	)
 }

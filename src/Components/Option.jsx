@@ -1,13 +1,13 @@
 import React from "react"
 
-const Option = ({ text }) => {
+const Option = ({ text, isChecked }) => {
 	return (
 		<>
 			<input
 				type="radio"
 				name="buttons"
 				id={text}
-				value="4"
+				checked={isChecked}
 				className="hidden [&+*]:checked:text-blue"
 			/>
 			<label
