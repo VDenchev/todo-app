@@ -4,7 +4,7 @@ import Check from "../Images/icon-check.svg"
 const Todo = ({ isChecked, message, setTodoList }) => {
 	//Problem/Feature???
 	//If there are more than 1 todos
-	//with the same message it will complete all of them
+	//with the same message it will complete/remove all of them
 	const completeTodo = () => {
 		setTodoList((prevTodoList) => {
 			return prevTodoList.map((todo) => {
@@ -13,6 +13,12 @@ const Todo = ({ isChecked, message, setTodoList }) => {
 				}
 				return todo
 			})
+		})
+	}
+
+	const removeTodo = () => {
+		setTodoList((prevTodoList) => {
+			return prevTodoList.filter((todo) => todo.message !== message)
 		})
 	}
 	return (
@@ -27,7 +33,9 @@ const Todo = ({ isChecked, message, setTodoList }) => {
 			<p className="my-auto mr-auto -mb-[2px] text-light-blue-500 transition-all delay-200 text-sm">
 				{message}
 			</p>
-			<button className="w-3 h-3 self-center opacity-0 group-hover:opacity-100 transition-all delay-200">
+			<button
+				className="w-3 h-3 self-center opacity-0 group-hover:opacity-100 transition-all delay-200"
+				onClick={removeTodo}>
 				<img src={Cross} alt="X" />
 			</button>
 		</div>
