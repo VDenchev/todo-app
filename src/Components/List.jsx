@@ -14,21 +14,30 @@ const List = ({ todoList, setTodoList }) => {
 			case "All":
 				setTodoElements(
 					allTodos.map((todo) => (
-						<Todo isChecked={todo.isCompleted} message={todo.message}></Todo>
+						<Todo
+							isChecked={todo.isCompleted}
+							message={todo.message}
+							setTodoList={setTodoList}></Todo>
 					))
 				)
 				break
 			case "Active":
 				setTodoElements(
 					activeTodos.map((todo) => (
-						<Todo isChecked={todo.isCompleted} message={todo.message}></Todo>
+						<Todo
+							isChecked={todo.isCompleted}
+							message={todo.message}
+							setTodoList={setTodoList}></Todo>
 					))
 				)
 				break
 			case "Completed":
 				setTodoElements(
 					completedTodos.map((todo) => (
-						<Todo isChecked={todo.isCompleted} message={todo.message}></Todo>
+						<Todo
+							isChecked={todo.isCompleted}
+							message={todo.message}
+							setTodoList={setTodoList}></Todo>
 					))
 				)
 				break
