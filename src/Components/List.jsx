@@ -49,9 +49,12 @@ const List = ({ todoList, setTodoList }) => {
 	const clearCompletedTodos = () => {
 		setTodoList(activeTodos)
 	}
+
 	return (
 		<div className="bg-white rounded-md text-xs isolate shadow-sm">
-			{todoElements}
+			<div className="overflow-y-auto max-h-72 scroll-smooth bg-scroll">
+				{todoElements}
+			</div>
 			<div className="flex justify-between relative p-3 text-light-blue-400">
 				<p>{activeTodos.length} items left</p>
 				<div
