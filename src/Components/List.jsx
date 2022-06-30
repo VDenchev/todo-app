@@ -10,40 +10,31 @@ const List = ({ todoList, setTodoList }) => {
 	const activeTodos = todoList.filter((todo) => !todo.isCompleted)
 	const completedTodos = todoList.filter((todo) => todo.isCompleted)
 	useEffect(() => {
+		const createTodoElement = (todo) => {
+			return (
+				<Todo
+					isChecked={todo.isCompleted}
+					message={todo.message}
+					setTodoList={setTodoList}></Todo>
+			)
+		}
+
+		let displayedTodos = []
 		switch (option) {
 			case "All":
-				setTodoElements(
-					allTodos.map((todo) => (
-						<Todo
-							isChecked={todo.isCompleted}
-							message={todo.message}
-							setTodoList={setTodoList}></Todo>
-					))
-				)
+				displayedTodos = allTodos
 				break
 			case "Active":
-				setTodoElements(
-					activeTodos.map((todo) => (
-						<Todo
-							isChecked={todo.isCompleted}
-							message={todo.message}
-							setTodoList={setTodoList}></Todo>
-					))
-				)
+				displayedTodos = activeTodos
 				break
 			case "Completed":
-				setTodoElements(
-					completedTodos.map((todo) => (
-						<Todo
-							isChecked={todo.isCompleted}
-							message={todo.message}
-							setTodoList={setTodoList}></Todo>
-					))
-				)
+				displayedTodos = completedTodos
 				break
 			default:
 				break
 		}
+
+		setTodoElements(displayedTodos.map(createTodoElement))
 	}, [option, todoList])
 
 	const clearCompletedTodos = () => {
