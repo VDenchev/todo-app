@@ -52,13 +52,13 @@ const List = ({ todoList, setTodoList }) => {
 
 	return (
 		<div className="bg-white rounded-md text-xs isolate shadow-sm">
-			<div className="overflow-y-auto max-h-72 scroll-smooth bg-scroll">
+			<div className="overflow-y-auto max-h-96 scroll-smooth bg-scroll">
 				{todoElements}
 			</div>
-			<div className="flex justify-between relative p-3 text-light-blue-400">
+			<div className="flex justify-between relative p-4 px-5 md:px-6 text-light-blue-400">
 				<p>{activeTodos.length} items left</p>
 				<div
-					className="flex justify-center gap-5 absolute left-0 top-16 bg-white rounded-md p-3 w-full shadow-sm"
+					className="flex justify-center items-center gap-5 absolute left-0 top-16 bg-white rounded-md p-4 w-full shadow-sm md:static md:bg-none md:shadow-none md:p-0 md:w-auto"
 					onChange={(e) => setOption(e.target.id)}>
 					<Option text="All" isChecked={option === "All"} />
 					<Option text="Active" isChecked={option === "Active"} />
