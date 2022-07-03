@@ -38,7 +38,7 @@ const TodoInput = ({ handleEnterKeyPress }) => {
 				value={todo.message}
 				onChange={updateTodo}
 				onKeyDown={handleKeyDown}
-				className="bg-transparent text-sm md:text-lg text-light-blue-500 pt-1 focus:outline-none caret-blue leading-none"
+				className="bg-transparent text-sm md:text-lg text-light-blue-500 pt-1 focus:outline-none caret-blue leading-none w-full"
 			/>
 		</div>
 	)
