@@ -12,7 +12,7 @@ const Option = ({ text, isChecked }) => {
 			/>
 			<label
 				htmlFor={text}
-				className="font-bold cursor-pointer hover:text-light-blue-500 transition duration-200">
+				className="font-bold cursor-pointer hover:text-light-blue-500 hover:dark:text-dark-blue-200 transition duration-200">
 				{text}
 			</label>
 		</>
